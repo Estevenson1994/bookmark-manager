@@ -1,6 +1,15 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/dangroze/makers/Week4/bookmark_manager/spec/features/bookmark_spec.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/dangroze/makers/Week4/bookmark_manager/spec/features/index_spec.rb": [
         1,
         1,
@@ -10,6 +19,6 @@
         null
       ]
     },
-    "timestamp": 1548685529
+    "timestamp": 1548686079
   }
 }
