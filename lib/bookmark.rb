@@ -1,5 +1,5 @@
 class Bookmark
-  def list
+  def self.list
     ['http://www.google.com',
      'http://www.youtube.com',
      'http://www.makersacademy.com']
