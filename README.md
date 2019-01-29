@@ -21,3 +21,7 @@ I would like to see a list of bookmarks
 As a user
 So I can save bookmarks I like
 I want to add a new bookmark to the list
+
+As a user
+So I don't have unwanted bookmarks
+I want to be able to delete a bookmark

@@ -19,5 +19,14 @@ class BMManager < Sinatra::Base
     redirect('/bookmarks')
   end
 
+  get '/bookmarks/delete' do
+    erb :'bookmarks/delete'
+  end
+
+  post '/delete' do
+    Bookmark.delete(params[:delete])
+    redirect('/bookmarks')
+  end
+
   run! if app_file == $0
 end

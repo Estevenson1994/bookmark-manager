@@ -24,6 +24,12 @@ class Bookmark
     @con.exec "INSERT INTO bookmarks (url, title) VALUES (\'#{bookmark}\', \'#{title}\');" 
   end
 
+  def self.delete(title)
+    connect_db
+    @con.exec "DELETE FROM bookmarks WHERE title = '#{title}';"
+  end
+
+
   private
 
   def self.connect_db

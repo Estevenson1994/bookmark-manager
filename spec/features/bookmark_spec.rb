@@ -21,4 +21,12 @@ feature 'Viewing bookmarks' do
     expect(page).to have_content 'Makers Academy'
     expect(page).to have_content 'BBC'
   end
+  scenario 'delete bookmark' do
+    visit('/')
+    click_button('Bookmarks')
+    click_button('Delete bookmarks')
+    fill_in "delete_bookmark", :with => 'google'
+    click_button 'Delete'
+    expect(page).to_not have_content 'google'
+  end
 end
