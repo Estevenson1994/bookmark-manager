@@ -3,8 +3,9 @@ require 'capybara'
 require 'simplecov'
 require 'simplecov-console'
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
+require 'web_helper.rb'
 ENV['RACK_ENV'] = 'test'
-
+ENV['DB'] = 'bookmark_manager_test'
 Capybara.app = BMManager
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([

@@ -1,7 +1,11 @@
+require 'pg'
+
 class Bookmark
   def self.list
-    ['http://www.google.com',
-     'http://www.youtube.com',
-     'http://www.makersacademy.com']
+    con = PG.connect :dbname => ENV['DB']
+    rs = con.exec "SELECT * FROM bookmarks"
+    rs.map do |row|
+      row['url']
+    end
   end
 end

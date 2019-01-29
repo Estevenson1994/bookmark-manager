@@ -1,33 +1,37 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/dangroze/makers/Week4/bookmark_manager/spec/bookmark_spec.rb": [
+      "/Users/erinstevenson/Documents/Makers/week4/day1/bookmark_manager/spec/bookmark_spec.rb": [
         1,
         null,
         1,
         1,
         1,
         1,
+        null,
+        1,
         1,
         1,
         1,
         null,
-        null,
-        null
-      ],
-      "/Users/dangroze/makers/Week4/bookmark_manager/spec/features/bookmark_spec.rb": [
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
-        1,
         null,
         null
       ],
-      "/Users/dangroze/makers/Week4/bookmark_manager/spec/features/index_spec.rb": [
+      "/Users/erinstevenson/Documents/Makers/week4/day1/bookmark_manager/spec/features/bookmark_spec.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/erinstevenson/Documents/Makers/week4/day1/bookmark_manager/spec/features/index_spec.rb": [
         1,
         1,
         1,
@@ -36,6 +40,6 @@
         null
       ]
     },
-    "timestamp": 1548693111
+    "timestamp": 1548771687
   }
 }
