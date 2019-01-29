@@ -16,3 +16,8 @@ I would like to see a list of bookmarks
 |object|message|
 |:----:|:-----:|
 |list  |show   |
+
+
+As a user
+So I can save bookmarks I like
+I want to add a new bookmark to the list

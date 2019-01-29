@@ -4,3 +4,9 @@ List of Bookmarks
     <li><%= bookmark %></li>
   <% end %>
 </ul>
+<br>
+<form action='/add', method='post'>
+  <input type='text' name='new_bookmark'>
+  <br>
+  <input type='submit' value='Add'>
+</form>

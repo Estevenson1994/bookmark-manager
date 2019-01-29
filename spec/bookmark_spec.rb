@@ -11,4 +11,13 @@ RSpec.describe Bookmark do
       expect(bookmarks).to include('http://www.makersacademy.com')
     end
   end
+  describe'.add' do
+    before(:each) do
+      db_setup
+    end
+    it 'adds a bookmark' do
+      Bookmark.add("http://www.bbc.co.uk")
+      expect(Bookmark.list).to include('http://www.bbc.co.uk')
+    end
+  end
 end
