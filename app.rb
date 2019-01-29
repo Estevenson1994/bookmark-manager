@@ -6,12 +6,16 @@ class BMManager < Sinatra::Base
     erb :index
   end
   get '/bookmarks' do
-    @bookmarks = Bookmark.list
+    @bookmarks = Bookmark.all
     erb :'bookmarks/index'
   end
 
+  get '/bookmarks/new' do
+    erb :'bookmarks/new'
+  end
+
   post '/add' do
-    Bookmark.add(params[:new_bookmark])
+    Bookmark.add(params[:title], params[:new_bookmark])
     redirect('/bookmarks')
   end
 

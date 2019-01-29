@@ -1,14 +1,14 @@
 require 'bookmark'
 
 RSpec.describe Bookmark do
-  describe '.list' do
+  describe '.all' do
     before(:each) do
       db_setup
     end
     it 'returns all bookmarks' do
-      bookmarks = Bookmark.list
-      expect(bookmarks).to include('http://www.google.com')
-      expect(bookmarks).to include('http://www.makersacademy.com')
+      bookmarks = Bookmark.all
+      expect(bookmarks[1].url).to eq('http://www.google.com')
+      expect(bookmarks[0].url).to eq('http://www.makersacademy.com')
     end
   end
   describe'.add' do
@@ -16,8 +16,8 @@ RSpec.describe Bookmark do
       db_setup
     end
     it 'adds a bookmark' do
-      Bookmark.add("http://www.bbc.co.uk")
-      expect(Bookmark.list).to include('http://www.bbc.co.uk')
+      Bookmark.add('bbc',"http://www.bbc.co.uk")
+      expect(Bookmark.all[-1].url).to eq('http://www.bbc.co.uk')
     end
   end
 end
