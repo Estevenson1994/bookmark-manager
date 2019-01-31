@@ -15,7 +15,7 @@ class BMManager < Sinatra::Base
   end
 
   post '/add' do
-    Bookmark.add(params[:title], params[:new_bookmark])
+    Bookmark.add(title: params[:title], url: params[:new_bookmark])
     redirect('/bookmarks')
   end
 
@@ -24,7 +24,7 @@ class BMManager < Sinatra::Base
   end
 
   post '/delete' do
-    Bookmark.delete(params[:delete])
+    Bookmark.delete(params[:delete_bookmark])
     redirect('/bookmarks')
   end
 

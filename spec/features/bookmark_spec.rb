@@ -1,7 +1,4 @@
 feature 'Viewing bookmarks' do
-    before(:each) do
-      db_setup
-    end
   scenario 'can see a list of bookmarks' do
     visit('/')
     click_button('Bookmarks')
@@ -26,7 +23,7 @@ feature 'Viewing bookmarks' do
     click_button('Bookmarks')
     click_button('Delete bookmarks')
     fill_in "delete_bookmark", :with => 'google'
-    click_button 'Delete'
+    click_button 'delete'
     expect(page).to_not have_content 'google'
   end
 end

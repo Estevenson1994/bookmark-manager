@@ -19,9 +19,9 @@ class Bookmark
     @list
   end
 
-  def self.add(title, bookmark)
+  def self.add(title:, url:)
     connect_db
-    @con.exec "INSERT INTO bookmarks (url, title) VALUES (\'#{bookmark}\', \'#{title}\');" 
+    @con.exec "INSERT INTO bookmarks (url, title) VALUES ('#{url}', '#{title}');" 
   end
 
   def self.delete(title)
@@ -33,7 +33,10 @@ class Bookmark
   private
 
   def self.connect_db
-    ENV['DB'] = 'bookmark_manager' if ENV['DB'] == nil
-    @con = PG.connect :dbname => ENV['DB']
+    if ENV['ENVIRONMENT'] == 'test'
+      @con = PG.connect :dbname => 'bookmark_manager_test'
+    else
+      @con = PG.connect :dbname => 'bookmark_manager'
+    end
   end
 end

@@ -8,17 +8,11 @@
         1,
         1,
         1,
-        null,
-        1,
-        1,
         1,
         1,
         null,
         null,
         1,
-        1,
-        1,
-        null,
         1,
         1,
         1,
@@ -29,7 +23,11 @@
       "/Users/erinstevenson/Documents/Makers/week4/day1/bookmark_manager/spec/features/bookmark_spec.rb": [
         1,
         1,
-        2,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         1,
         1,
@@ -37,11 +35,12 @@
         1,
         1,
         1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
-        1,
-        1,
-        1,
-        1,
         1,
         1,
         1,
@@ -61,6 +60,6 @@
         null
       ]
     },
-    "timestamp": 1548778474
+    "timestamp": 1548936020
   }
 }
