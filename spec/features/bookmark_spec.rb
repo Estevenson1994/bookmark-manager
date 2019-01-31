@@ -7,9 +7,7 @@ feature 'Viewing bookmarks' do
     expect(page).to have_content 'Makers Academy'
   end
   scenario 'adding bookmarks' do
-    visit('/')
-    click_button('Bookmarks')
-    click_button('Add new bookmark')
+    visit('/bookmarks/new')
     fill_in "new_bookmark", :with => 'http://www.bbc.co.uk'
     fill_in "title", :with => 'BBC'
     click_button 'Add'
@@ -21,10 +19,9 @@ feature 'Viewing bookmarks' do
   scenario 'delete bookmark' do
     visit('/')
     click_button('Bookmarks')
-    expect(page).to have_link('google', href: 'http://www.google.com')
-    click_button('Delete bookmarks')
-    fill_in "delete_bookmark", :with => 'google'
-    click_button 'delete'
-    expect(page).to_not have_link('google', href: 'http://www.google.com')
+    expect(page).to have_link('Makers Academy', href: 'http://www.makersacademy.com')
+    first('.bookmark').click_button 'Delete'
+    expect(current_path).to eq '/bookmarks'
+    expect(page).to_not have_link('Makers Academy', href: 'http://www.makersacademy.com')
   end
 end
