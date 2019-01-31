@@ -21,9 +21,10 @@ feature 'Viewing bookmarks' do
   scenario 'delete bookmark' do
     visit('/')
     click_button('Bookmarks')
+    expect(page).to have_link('google', href: 'http://www.google.com')
     click_button('Delete bookmarks')
     fill_in "delete_bookmark", :with => 'google'
     click_button 'delete'
-    expect(page).to_not have_content 'google'
+    expect(page).to_not have_link('google', href: 'http://www.google.com')
   end
 end
