@@ -14,9 +14,9 @@ feature 'Viewing bookmarks' do
     fill_in "title", :with => 'BBC'
     click_button 'Add'
     expect(page).to have_content 'List of Bookmarks'
-    expect(page).to have_content 'google'
-    expect(page).to have_content 'Makers Academy'
-    expect(page).to have_content 'BBC'
+    expect(page).to have_link('google', href: 'http://www.google.com')
+    expect(page).to have_link('Makers Academy', href: 'http://www.makersacademy.com')
+    expect(page).to have_link('BBC', href: 'http://www.bbc.co.uk')
   end
   scenario 'delete bookmark' do
     visit('/')
